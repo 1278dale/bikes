@@ -5,7 +5,7 @@ def initialize
 end
 
 def broken?
-
+  @broken
 end
 
 def break!
