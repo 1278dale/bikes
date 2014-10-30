@@ -6,7 +6,13 @@ require 'bike'
 describe Bike do
   
   it "should not be broken when it is created" do
-  the_bike = Bike.new
-  expect(the_bike).not_to be_broken
+  bike = Bike.new
+  expect(bike.broken?).to eq false
+  end
+
+  it "should be able to break" do 
+    bike = Bike.new
+    bike.break!
+    expect(bike.broken?).to eq true
   end
 end
