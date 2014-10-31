@@ -18,12 +18,16 @@ describe Bike do
 
   it "should be able to be fixed" do
     bike = Bike.new
+    # create a new bike, which isn't broken(@broken=false)
     bike.break!
-    expect(bike.broken?).to be true
+    # calling method break! on bike
+    expect(bike.broken?).to be true 
+    # expecting bike broken to be true
     bike.fix!
+    # calling method fix on bike
     expect(bike.broken?).to be false
+    # expecting bike broken to be false 
   end
-
 end
 
 
